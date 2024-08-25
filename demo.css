@@ -1,0 +1,44 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.progress {
+    background-color: #333;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    height: 25px;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    transition: width 2s ease-in-out;
+}
+
+.progress-bar::after {
+    content: attr(data-percentage) '%';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
